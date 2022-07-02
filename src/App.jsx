@@ -14,12 +14,33 @@ const App = () => {
             <For each={arr}>{() => <Mosquito />}</For>
           </div>
         </div>
-        <div class="flex-auto bg-stone-400">
-          <div class="flex flex-col justify-items-center w-full">
-            <p className="p-4 text-xl font-semibold text-black">
-              score: {count()}
-            </p>
-            <div></div>
+        <div class="flex-auto m-6">
+          <div class="flex flex-col justify-items-center justify-evenly h-full w-full">
+            <div class="bg-zinc-200 rounded-3xl h-96">
+              <div class="flex flex-col justify-items-center justify-between h-full ">
+                <p className="p-4 text-xl font-semibold text-black">
+                  SCORE: {count()}
+                </p>
+                <div class="flex flex-col text-center">
+                  <p class="p-2 m-2 bg-zinc-800 text-center rounded-xl">
+                    <span class="bg-clip-text text-transparent font-medium bg-gradient-to-r from-lime-400 to-cyan-500">
+                      created by <b>tam-arai-sak-yang-tee</b>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-evenly font-semibold text-white w-full">
+              <a href="https://youtu.be/xm3YgoEiEDc" target="_blank">
+                Visit Site
+              </a>
+              <a href="https://youtu.be/iik25wqIuFo" target="_blank">
+                Contribute
+              </a>
+              <a href="https://youtu.be/mKRZIHwTr-I" target="_blank">
+                Learn more
+              </a>
+            </div>
           </div>
         </div>
       </div>
