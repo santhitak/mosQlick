@@ -74,15 +74,15 @@ function Mosquito() {
   const [dead, setDead] = createSignal(false);
 
   const living = setInterval(() => {
-    setPosX(Math.floor(Math.random() * 1280) - 32);
-    setPosY(Math.floor(Math.random() * 800) + 32);
-  }, Math.floor(500 + Math.random() * 500));
+    setPosX(Math.floor(Math.random() * 1280) - 32)
+    setPosY(Math.floor(Math.random() * 800) + 32)
+  }, (Math.floor(500 + Math.random() * 500)) - (count() * 10))
 
   const kill = () => {
     if (!dead()) {
       i += 1;
       clearInterval(living);
-      ref.src = "/dead_mosquito.jpeg";
+      ref.src = "/dead_mosquito.png";
       ref.classList.remove("cursor-grab");
       setCount(count() + 1);
       setAlive(alive() - 1);
@@ -115,8 +115,8 @@ function Mosquito() {
   return (
     <img
       ref={ref}
-      src="/mosquito.jpeg"
-      className="absolute w-8 h-8 transition-all bg-red-400 cursor-grab select-none"
+      src="/mosquito.png"
+      className="absolute w-8 h-8 transition-all select-none cursor-grab"
       onClick={kill}
       style={{
         top: `${posY()}px`,
