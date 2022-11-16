@@ -33,7 +33,7 @@ const App = () => {
                 <div class="flex flex-col">
                   <p class="p-2 m-4 bg-zinc-800 text-center rounded-xl">
                     <span class="bg-clip-text text-transparent font-medium bg-gradient-to-r from-lime-400 to-cyan-500">
-                      created by <b>tam-arai-sak-yang-tee</b>
+                      created by <b>NONDEV</b>
                     </span>
                   </p>
                 </div>
@@ -74,9 +74,9 @@ function Mosquito() {
   const [dead, setDead] = createSignal(false);
 
   const living = setInterval(() => {
-    setPosX(Math.floor(Math.random() * 1280) - 32)
-    setPosY(Math.floor(Math.random() * 800) + 32)
-  }, (Math.floor(500 + Math.random() * 500)) - (count() * 10))
+    setPosX(Math.floor(Math.random() * 1280) - 32);
+    setPosY(Math.floor(Math.random() * 800) + 32);
+  }, Math.floor(500 + Math.random() * 500) - count() * 10);
 
   const kill = () => {
     if (!dead()) {
